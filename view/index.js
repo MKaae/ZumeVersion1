@@ -22,7 +22,7 @@ async function renderBallChain(balls){
         const ballNode = ballchain.get(i);
         const ballData = ballNode.data;
         const ballImg = visualBalls[ballData];
-        ballchainHTML += `<div class="ball-container"><img class="ball" src="../images/${ballImg}" style="height:50px;width:50px"></div>`;
+        ballchainHTML += `<div class="ball-container"><img class="ball" src="./images/${ballImg}" style="height:50px;width:50px"></div>`;
         if (i !== ballChainLength - 1) { 
             ballchainHTML += createButton(i);
         }
@@ -44,7 +44,7 @@ function createButton(index) {
 function playerBalls() {
     const ball = playerBall();
     const ballImg = visualBalls[ball.data];
-    const ballHTML = `<div class="player-ball"><img class="player-ball-img" src="../images/${ballImg}" style="height:50px;width:50px;"></div>`;
+    const ballHTML = `<div class="player-ball"><img class="player-ball-img" src="./images/${ballImg}" style="height:50px;width:50px;"></div>`;
     document.getElementById("playerball").innerHTML = ballHTML;
     return ball;
 }
