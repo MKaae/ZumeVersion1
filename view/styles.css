@@ -1,0 +1,53 @@
+.ball-container {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+}
+
+.expand {
+    animation-name: expand;
+    animation-duration: .2s;
+    animation-timing-function: ease-in;
+    animation-delay: 0.8s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+  }
+  
+  @keyframes expand {
+    from {
+      width: 100px;
+    }
+    to {
+      width: 200px;
+    }
+  }
+  
+.animatefromcannon {
+    animation-name: animatefromcannon;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animatefromcannon {
+    from {
+        transform: translate(0, 0);
+    }
+    to {
+        transform: translate(var(--delta-x), var(--delta-y));
+    }
+}
+  
+  .implode {
+    animation: implode .7s ease-in 1 forwards;
+  }
+  
+  @keyframes implode {
+    from {
+      scale: 1;
+    }
+    to {
+      scale: 0;
+    }
+  }
